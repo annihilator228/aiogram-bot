@@ -1,9 +1,9 @@
+from os import getenv
 import asyncio
 from aiogram import Bot, Dispatcher
-from Tokens import BOT_TOKEN_Lesson8
 from routes import router, notifier
 
-BOT_TOKEN=BOT_TOKEN_Lesson8
+BOT_TOKEN=getenv("BOT_TOKEN")
 
 dp=Dispatcher()
 dp.include_router(router)
